@@ -38,9 +38,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
     }
-
     // metoden som er koblet til tekst. Utføres når man klikker på teksten i activity_main
     public void clickText(View view) {
         TextView text = (TextView) findViewById(R.id.textView4);
@@ -54,7 +52,56 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+    public void clickImg2(View view) {
+        ImageView img = (ImageView) findViewById(R.id.imageView4);
+        img.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View view) {
+                AddApplicationApp();
+
+            }
+        });
+    }
+
+    public void clickText2(View view) {
+        TextView text = (TextView) findViewById(R.id.textView6);
+        text.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                AddApplicationApp();
+
+            }
+        });
+    }
+
+
+    public void clickImg3(View view) {
+
+        ImageView img = (ImageView) findViewById(R.id.imageView3);
+        img.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                AddApplicationAddEntry();
+
+            }
+        });
+    }
+
+
+    public void clickText3(View view) {
+        TextView text = (TextView) findViewById(R.id.textView5);
+        text.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                AddApplicationAddEntry();
+
+            }
+        });
+    }
 
     /*
     Oppretter intent som forteller hvilke klasse man er i, og hvilke klasse man ønsker å påkalle (invoke).
@@ -66,4 +113,17 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, DatabaseActivity.class);
         startActivity(intent);
     }
+
+
+    private void AddApplicationAddEntry() {
+        Intent intent = new Intent(MainActivity.this, AddEntryActivity.class);
+        startActivity(intent);
+    }
+
+
+    private void AddApplicationApp() {
+        Intent intent = new Intent(MainActivity.this, AppActivity.class);
+        startActivity(intent);
+    }
+
 }

@@ -82,7 +82,7 @@ public class DatabaseActivity extends AppCompatActivity {
             case R.id.menu_dec:
                 // sort å to a
                 Collections.sort(studentlist.myList(),Student.StudentNameComparatorRev);
-                Toast.makeText(DatabaseActivity.this, "Sort å til å", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DatabaseActivity.this, "Sort å til a", Toast.LENGTH_SHORT).show();
                 ((BaseAdapter) listAdapter).notifyDataSetChanged();
                 return true;
 
