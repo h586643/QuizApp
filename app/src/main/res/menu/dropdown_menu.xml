@@ -6,4 +6,7 @@
     <item
         android:id="@+id/menu_dec"
         android:title="Å -> A" />
+    <item
+        android:id="@+id/menu_addEntry"
+        android:title="add entry" />
 </menu>

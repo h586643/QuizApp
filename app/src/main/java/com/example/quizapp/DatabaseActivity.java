@@ -4,6 +4,7 @@ package com.example.quizapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,7 +15,7 @@ import com.example.quizapp.databinding.DatabaseMainBinding;
 import java.util.Collections;
 
 
-public class MainActivity2 extends AppCompatActivity {
+public class DatabaseActivity extends AppCompatActivity {
 
     private DatabaseMainBinding binding;
     Menu menu;
@@ -34,9 +35,9 @@ public class MainActivity2 extends AppCompatActivity {
 
         studentlist.fillStudentList();
 
-        listAdapter = new ListAdapter(MainActivity2.this, studentlist.studentsList);
+        listAdapter = new ListAdapter(DatabaseActivity.this, studentlist.studentsList);
         binding.listView.setAdapter(listAdapter);
-        // blir den scrollable
+        // blir den scrollable?
         binding.listView.setFastScrollEnabled(true);
         binding.listView.setClickable(true);
     }
@@ -53,7 +54,7 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.sort_menu, menu);
+        inflater.inflate(R.menu.dropdown_menu, menu);
 
         return true;
 
@@ -61,10 +62,8 @@ public class MainActivity2 extends AppCompatActivity {
 
 
 
-
-
     /*
-    Update view
+    Update view, menu.
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -72,9 +71,9 @@ public class MainActivity2 extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.menu_alpha:
                 // sort a to å, use comparator in Student class.
-                Toast.makeText(MainActivity2.this, "Sort a til å", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DatabaseActivity.this, "Sort a til å", Toast.LENGTH_SHORT).show();
                 Collections.sort(studentlist.myList(),Student.StudentNameComparator);
-                // tell the Adapter about the dataset change.
+                // tell`s the Adapter about the dataset change.
                 ((BaseAdapter) listAdapter).notifyDataSetChanged();
 
 
@@ -83,10 +82,20 @@ public class MainActivity2 extends AppCompatActivity {
             case R.id.menu_dec:
                 // sort å to a
                 Collections.sort(studentlist.myList(),Student.StudentNameComparatorRev);
-                Toast.makeText(MainActivity2.this, "Sort å til å", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DatabaseActivity.this, "Sort å til å", Toast.LENGTH_SHORT).show();
                 ((BaseAdapter) listAdapter).notifyDataSetChanged();
                 return true;
+
+
+                // Kan man lage shortcut med intent?
+            case R.id.menu_addEntry:
+                Intent intent = new Intent(DatabaseActivity.this, AddEntryActivity.class);
+                startActivity(intent);
+
+
+
         }
+
 
         return super.onOptionsItemSelected(item);
     }

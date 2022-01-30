@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                AddApplication();
+                AddApplicationDatabase();
 
             }
         });
@@ -40,14 +41,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // metoden som er koblet til tekst. Utføres når man klikker på teksten i activity_main
+    public void clickText(View view) {
+        TextView text = (TextView) findViewById(R.id.textView4);
+        text.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                AddApplicationDatabase();
+
+            }
+        });
+
+    }
+
+
     /*
     Oppretter intent som forteller hvilke klasse man er i, og hvilke klasse man ønsker å påkalle (invoke).
     - i klassen MainActivity kaller man layout i onCreate metoden.
     - lager intent for å kunne komme tilbake til hovedaktiviteten. Lager det på knapper etc.
      */
 
-    private void AddApplication() {
-        Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+    private void AddApplicationDatabase() {
+        Intent intent = new Intent(MainActivity.this, DatabaseActivity.class);
         startActivity(intent);
     }
 }
