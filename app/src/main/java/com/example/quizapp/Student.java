@@ -7,23 +7,50 @@ public class Student {
 // Gjøre private
    private String name;
    private int imgId;
+   private int id;
 
-    public Student(String name, int img) {
+
+    public Student(String name, int img, int id) {
 
         this.name = name;
         this.imgId = img;
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", imgId=" + imgId +
+                ", id=" + id +
+                '}';
     }
 
     public String getName() {
+
         return name;
     }
 
     public int getImgId() {
+
         return imgId;
     }
 
+    public int getId(){
+        return id;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setImgId(int imgId) {
+        this.imgId = imgId;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public static Comparator<Student> StudentNameComparator = new Comparator<Student>() {
         @Override
