@@ -9,7 +9,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Toast;
 import com.example.quizapp.databinding.DatabaseMainBinding;
 import java.util.Collections;
@@ -34,10 +37,9 @@ public class DatabaseActivity extends AppCompatActivity {
 
         listAdapter = new ListAdapter(DatabaseActivity.this, studentlist.studentsList);
         binding.listView.setAdapter(listAdapter);
-        // blir den scrollable?
-        binding.listView.setFastScrollEnabled(true);
-        binding.listView.setClickable(true);
+
     }
+
 
 
     /*
