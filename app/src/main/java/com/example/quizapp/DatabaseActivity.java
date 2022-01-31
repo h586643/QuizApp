@@ -24,9 +24,6 @@ public class DatabaseActivity extends AppCompatActivity {
 
 
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,8 +40,6 @@ public class DatabaseActivity extends AppCompatActivity {
     }
 
 
-
-
     /*
     Brukes for å jobbe med menyen.
 
@@ -59,9 +54,6 @@ public class DatabaseActivity extends AppCompatActivity {
         return true;
 
     }
-
-
-
     /*
     Update view, menu.
      */
@@ -91,7 +83,6 @@ public class DatabaseActivity extends AppCompatActivity {
             case R.id.menu_addEntry:
                 Intent intent = new Intent(DatabaseActivity.this, AddEntryActivity.class);
                 startActivity(intent);
-
 
 
         }

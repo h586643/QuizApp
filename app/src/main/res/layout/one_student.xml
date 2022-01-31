@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="4dp"
     >
-
 
 
     <ImageView
@@ -17,9 +16,21 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
         android:text="TextView" />
 
+    <ImageView
+        android:id="@+id/image_delete"
+        android:layout_width="49dp"
+        android:layout_height="47dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="19dp"
+        android:src="@drawable/ic_delete">
 
-</LinearLayout>
+    </ImageView>
+
+
+</RelativeLayout>

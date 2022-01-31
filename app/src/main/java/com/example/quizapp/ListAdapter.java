@@ -34,6 +34,7 @@ public class ListAdapter extends ArrayAdapter<Student> {
 
         ImageView imageView = convertView.findViewById(R.id.imageView2);
         TextView text = convertView.findViewById(R.id.textView2);
+        ImageView delete = convertView.findViewById(R.id.image_delete);
 
         imageView.setImageResource(student.getImgId());
         text.setText(student.getName());
