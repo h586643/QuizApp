@@ -15,16 +15,18 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.example.quizapp.databinding.DatabaseMainBinding;
+
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 
 public class DatabaseActivity extends AppCompatActivity {
 
     private DatabaseMainBinding binding;
-    Menu menu;
-    StudentList studentlist = new StudentList();
+    List<Student> studentList;
     private ListAdapter listAdapter;
-
+    StudentList st = new StudentList();
 
 
     @Override
@@ -33,13 +35,16 @@ public class DatabaseActivity extends AppCompatActivity {
         binding = DatabaseMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        studentlist.fillStudentList();
+        // NB! Viktig å kalle (this.getApplication) i onCreate, ellers får man NULL pointer
+        st = (StudentList) this.getApplication();
+        studentList = st.getStudentsList();
 
-        listAdapter = new ListAdapter(DatabaseActivity.this, studentlist.studentsList);
+       // st = new StudentList();
+
+        listAdapter = new ListAdapter(DatabaseActivity.this, st.getStudentsList());
         binding.listView.setAdapter(listAdapter);
 
     }
-
 
 
     /*
@@ -66,7 +71,7 @@ public class DatabaseActivity extends AppCompatActivity {
             case R.id.menu_alpha:
                 // sort a to å, use comparator in Student class.
                 Toast.makeText(DatabaseActivity.this, "Sort a til å", Toast.LENGTH_SHORT).show();
-                Collections.sort(studentlist.myList(),Student.StudentNameComparator);
+                Collections.sort(st.getStudentsList(),Student.StudentNameComparator);
                 // tell`s the Adapter about the dataset change.
                 ((BaseAdapter) listAdapter).notifyDataSetChanged();
 
@@ -75,7 +80,7 @@ public class DatabaseActivity extends AppCompatActivity {
 
             case R.id.menu_dec:
                 // sort å to a
-                Collections.sort(studentlist.myList(),Student.StudentNameComparatorRev);
+                Collections.sort(st.getStudentsList(),Student.StudentNameComparatorRev);
                 Toast.makeText(DatabaseActivity.this, "Sort å til a", Toast.LENGTH_SHORT).show();
                 ((BaseAdapter) listAdapter).notifyDataSetChanged();
                 return true;

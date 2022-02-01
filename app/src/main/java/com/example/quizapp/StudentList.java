@@ -2,6 +2,7 @@ package com.example.quizapp;
 
 import android.app.Application;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,11 +10,12 @@ import java.util.List;
 public class StudentList extends Application{
 
 
-    ArrayList<Student> studentsList = new ArrayList<>();
+   private ArrayList<Student> studentsList = new ArrayList<>();
 
-    public StudentList() {
+    public StudentList(){
         fillStudentList();
     }
+
     public void fillStudentList() {
 
         Student s1 = new Student("Cathrine", R.drawable.cat1, 1);
@@ -24,9 +26,9 @@ public class StudentList extends Application{
 
     }
 
-    public List<Student> myList(){
 
-        return studentsList;
+    public int studentListSize(){
+        return studentsList.size();
     }
 
     public ArrayList<Student> getStudentsList() {
@@ -37,3 +39,4 @@ public class StudentList extends Application{
         this.studentsList = studentsList;
     }
 }
+

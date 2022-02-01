@@ -18,7 +18,6 @@ import java.util.ArrayList;
 
 public class ListAdapter extends ArrayAdapter<Student> {
 
-    private StudentList studentList;
 
     public ListAdapter(Context context, ArrayList<Student> userArrayList) {
         super(context, R.layout.one_student, userArrayList);
