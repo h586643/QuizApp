@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -124,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void AddApplicationApp() {
-        Intent intent = new Intent(MainActivity.this, AppActivity.class);
+        Intent intent = new Intent(MainActivity.this, QuizActivity.class);
         startActivity(intent);
     }
 

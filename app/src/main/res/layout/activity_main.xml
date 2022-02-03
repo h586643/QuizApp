@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:onClick="clickText2"
-        android:text="App"
+        android:text="Quiz"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
