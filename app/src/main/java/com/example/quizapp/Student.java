@@ -8,6 +8,7 @@ public class Student {
    private String name;
    private int imgId;
    private int id;
+   private boolean correctStudent;
 
 
     public Student(String name, int img, int id) {
@@ -15,6 +16,7 @@ public class Student {
         this.name = name;
         this.imgId = img;
         this.id = id;
+        this.correctStudent = false;
     }
 
     @Override
@@ -24,6 +26,14 @@ public class Student {
                 ", imgId=" + imgId +
                 ", id=" + id +
                 '}';
+    }
+
+    public boolean getCorrectStudent() {
+        return correctStudent;
+    }
+
+    public void setCorrectStudent(boolean isCorrect) {
+        this.correctStudent = isCorrect;
     }
 
     public String getName() {
