@@ -9,8 +9,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.quizapp.databinding.DatabaseMainBinding;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;

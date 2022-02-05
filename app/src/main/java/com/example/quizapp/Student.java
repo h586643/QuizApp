@@ -16,7 +16,7 @@ public class Student {
         this.name = name;
         this.imgId = img;
         this.id = id;
-        this.correctStudent = false;
+        correctStudent = false;
     }
 
     @Override
@@ -33,7 +33,7 @@ public class Student {
     }
 
     public void setCorrectStudent(boolean isCorrect) {
-        this.correctStudent = isCorrect;
+        correctStudent = isCorrect;
     }
 
     public String getName() {
