@@ -32,6 +32,8 @@ public class QuizActivity extends AppCompatActivity {
 
     public void onNext(View v){
 
+        // Laste inn tilfeldig bilde og tilhørende navn fra DatabaseActivity
+
         ImageView image = findViewById(R.id.studentPicture);
         Button answer1 = findViewById(R.id.answer1);
         Button answer2 = findViewById(R.id.answer2);
@@ -47,14 +49,6 @@ public class QuizActivity extends AppCompatActivity {
         answer3.setText(st.get(2).getName());
 
     }
-
-
-
-    // Laste inn tilfeldig bilde fra DatabaseActivity
-
-    // Vise tilhørende tekst (riktig svaralternativ) sammen med to andre tekstalternativer som er feil
-
-    // Loope gjennom på denne måten i det uendelige
 
     // Holde score
 }
