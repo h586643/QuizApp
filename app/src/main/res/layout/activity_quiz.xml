@@ -15,7 +15,8 @@
         android:textColor="@android:color/black"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        />
 
     <ImageView
         android:id="@+id/studentPicture"
