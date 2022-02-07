@@ -3,6 +3,7 @@ package com.example.quizapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class AddEntryActivity extends AppCompatActivity {
 
@@ -37,9 +39,16 @@ public class AddEntryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                // Velger random bilde fra recource array under values
+                final TypedArray imgs = getResources().obtainTypedArray(R.array.quizApp);
+                final Random rand = new Random();
+                final int rndInt = rand.nextInt(imgs.length());
+                final int resID = imgs.getResourceId(rndInt,0);
+
+
                 //Oppretter student objektet (id, navnet + bilde).
 
-                Student newStudent = new Student(st_name.getText().toString(),R.drawable.cat4, st.studentListSize());
+                Student newStudent = new Student(st_name.getText().toString(),resID, st.studentListSize());
 
                 //Legger til objektet til global list (studentklassen).
 

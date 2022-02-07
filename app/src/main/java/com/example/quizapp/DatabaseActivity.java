@@ -94,7 +94,7 @@ public class DatabaseActivity extends AppCompatActivity {
     }
 
 // Sletter enhet, posisjon 0
-    
+
     public void clickDelete (View view){
         Button btn =  findViewById(R.id.image_delete);
         btn.setOnClickListener(new View.OnClickListener() {
