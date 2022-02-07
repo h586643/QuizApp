@@ -11,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -35,11 +36,9 @@ public class DatabaseActivity extends AppCompatActivity {
         binding = DatabaseMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        // NB! Viktig å kalle (this.getApplication) i onCreate, ellers får man NULL pointer
         st = (StudentList) this.getApplication();
         studentList = st.getStudentsList();
 
-       // st = new StudentList();
 
         listAdapter = new ListAdapter(DatabaseActivity.this, st.getStudentsList());
         binding.listView.setAdapter(listAdapter);
@@ -47,12 +46,11 @@ public class DatabaseActivity extends AppCompatActivity {
     }
 
 
-    /*
-    Brukes for å jobbe med menyen.
 
-     */
 
-    // Evnet that assign value to the menu
+
+    // Evnet som tildeler verdi til menyen
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -61,15 +59,15 @@ public class DatabaseActivity extends AppCompatActivity {
         return true;
 
     }
-    /*
-    Update view, menu.
-     */
+
+    //Oppdaterer view, meny.
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         switch (item.getItemId()) {
             case R.id.menu_alpha:
-                // sort a to å, use comparator in Student class.
+                // sorterer fra a to å.
                 Toast.makeText(DatabaseActivity.this, "Sort a til å", Toast.LENGTH_SHORT).show();
                 Collections.sort(st.getStudentsList(),Student.StudentNameComparator);
                 // tell`s the Adapter about the dataset change.
@@ -79,23 +77,35 @@ public class DatabaseActivity extends AppCompatActivity {
                 return true;
 
             case R.id.menu_dec:
-                // sort å to a
+                // sorterer fra å to a
                 Collections.sort(st.getStudentsList(),Student.StudentNameComparatorRev);
                 Toast.makeText(DatabaseActivity.this, "Sort å til a", Toast.LENGTH_SHORT).show();
                 ((BaseAdapter) listAdapter).notifyDataSetChanged();
                 return true;
 
 
-                // Kan man lage shortcut med intent?
             case R.id.menu_addEntry:
                 Intent intent = new Intent(DatabaseActivity.this, AddEntryActivity.class);
                 startActivity(intent);
 
-
         }
-
 
         return super.onOptionsItemSelected(item);
     }
+
+// Sletter enhet, posisjon 0
+    
+    public void clickDelete (View view){
+        Button btn =  findViewById(R.id.image_delete);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                studentList.remove(0);
+                ((BaseAdapter) listAdapter).notifyDataSetChanged();
+
+            }
+        });
+    }
+
 
 }

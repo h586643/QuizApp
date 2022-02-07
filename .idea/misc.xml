@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Eier/AndroidStudioProjects/QuizApp/app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/Eier/AndroidStudioProjects/QuizApp/app/src/main/res/layout/database_main.xml" value="0.25" />
+        <entry key="..\:/Users/Eier/AndroidStudioProjects/QuizApp/app/src/main/res/layout/one_student.xml" value="0.25" />
         <entry key="..\:/Users/monse/AndroidStudioProjects/QuizApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.11145833333333334" />
         <entry key="..\:/Users/monse/AndroidStudioProjects/QuizApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.11145833333333334" />
         <entry key="..\:/Users/monse/AndroidStudioProjects/QuizApp/app/src/main/res/layout/activity_custom_adapter.xml" value="0.346875" />
