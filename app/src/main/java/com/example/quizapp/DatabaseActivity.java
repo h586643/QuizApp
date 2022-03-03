@@ -45,11 +45,7 @@ public class DatabaseActivity extends AppCompatActivity {
 
     }
 
-
-
-
-
-    // Evnet som tildeler verdi til menyen
+    // Event som tildeler verdi til menyen
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -106,6 +102,4 @@ public class DatabaseActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }
