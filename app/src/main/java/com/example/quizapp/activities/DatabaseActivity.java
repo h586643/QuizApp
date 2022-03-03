@@ -14,10 +14,10 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.quizapp.ListAdapter;
+import com.example.quizapp.utils.ListAdapter;
 import com.example.quizapp.R;
-import com.example.quizapp.Student;
-import com.example.quizapp.StudentList;
+import com.example.quizapp.utils.Student;
+import com.example.quizapp.utils.StudentList;
 import com.example.quizapp.databinding.DatabaseMainBinding;
 
 import java.util.Collections;

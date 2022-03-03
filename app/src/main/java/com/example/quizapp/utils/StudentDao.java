@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.utils;
 
 import androidx.room.Dao;
 import androidx.room.Insert;

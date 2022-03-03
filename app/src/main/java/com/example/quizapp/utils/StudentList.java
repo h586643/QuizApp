@@ -1,11 +1,11 @@
-package com.example.quizapp;
+package com.example.quizapp.utils;
 
 import android.app.Application;
 
-import java.lang.reflect.Array;
+import com.example.quizapp.R;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class StudentList extends Application {
 

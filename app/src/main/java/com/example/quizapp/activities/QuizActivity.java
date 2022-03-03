@@ -6,17 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.quizapp.R;
-import com.example.quizapp.RandomStudentGenerator;
-import com.example.quizapp.Student;
-import com.example.quizapp.StudentList;
+import com.example.quizapp.utils.RandomStudentGenerator;
+import com.example.quizapp.utils.Student;
+import com.example.quizapp.utils.StudentList;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Random;
 
 public class QuizActivity extends AppCompatActivity {
 

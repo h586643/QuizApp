@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.quizapp.R;
-import com.example.quizapp.Student;
-import com.example.quizapp.StudentList;
+import com.example.quizapp.utils.Student;
+import com.example.quizapp.utils.StudentList;
 
 import java.util.List;
 import java.util.Random;
