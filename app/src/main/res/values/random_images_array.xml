@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <array name="quizApp">
+        <item>@drawable/cat1</item>
+        <item>@drawable/cat2</item>
+        <item>@drawable/cat4</item>
+    </array>
+</resources>
