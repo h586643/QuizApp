@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,10 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.example.quizapp.R;
+import com.example.quizapp.Student;
+import com.example.quizapp.StudentList;
+
 import java.util.List;
 import java.util.Random;
 

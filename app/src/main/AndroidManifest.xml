@@ -11,16 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizApp">
         <activity
-            android:name=".QuizActivity"
+            android:name=".activities.QuizActivity"
             android:exported="false" />
         <activity
-            android:name=".AddEntryActivity"
+            android:name=".activities.AddEntryActivity"
             android:exported="false" />
         <activity
-            android:name=".DatabaseActivity"
+            android:name=".activities.DatabaseActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

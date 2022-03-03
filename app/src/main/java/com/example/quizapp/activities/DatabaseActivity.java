@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.quizapp.activities;
 
 
 import androidx.annotation.NonNull;
@@ -12,12 +12,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.quizapp.ListAdapter;
+import com.example.quizapp.R;
+import com.example.quizapp.Student;
+import com.example.quizapp.StudentList;
 import com.example.quizapp.databinding.DatabaseMainBinding;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
