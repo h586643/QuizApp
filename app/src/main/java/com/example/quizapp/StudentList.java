@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class StudentList extends Application{
+public class StudentList extends Application {
 
 
    private ArrayList<Student> studentList = new ArrayList<>();
