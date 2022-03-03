@@ -28,7 +28,7 @@ public class AddEntryActivity extends AppCompatActivity {
 
         // NB! Viktig å kalle (this.getApplication) i onCreate, ellers får man NULL pointer
         st = (StudentList) this.getApplication();
-        studentList = st.getStudentsList();
+        studentList = st.getStudentList();
         st_name = findViewById(R.id.editTextTextPersonName);
 
     }

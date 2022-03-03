@@ -10,7 +10,7 @@ import java.util.List;
 public class StudentList extends Application{
 
 
-   private ArrayList<Student> studentsList = new ArrayList<>();
+   private ArrayList<Student> studentList = new ArrayList<>();
 
     public StudentList(){
         fillStudentList();
@@ -22,21 +22,21 @@ public class StudentList extends Application{
         Student s2 = new Student("Isabella", R.drawable.cat4, 2);
         Student s3 = new Student("Iselin", R.drawable.cat2, 3);
 
-        studentsList.addAll(Arrays.asList(new Student[] {s1,s2,s3}));
+        studentList.addAll(Arrays.asList(new Student[] {s1,s2,s3}));
 
     }
 
 
     public int studentListSize(){
-        return studentsList.size();
+        return studentList.size();
     }
 
-    public ArrayList<Student> getStudentsList() {
-        return studentsList;
+    public ArrayList<Student> getStudentList() {
+        return studentList;
     }
 
-    public void setStudentsList(ArrayList<Student> studentsList) {
-        this.studentsList = studentsList;
+    public void setStudentList(ArrayList<Student> studentList) {
+        this.studentList = studentList;
     }
 }
 

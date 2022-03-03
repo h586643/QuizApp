@@ -17,7 +17,7 @@ public class QuizActivity extends AppCompatActivity {
 
     // Private variabler
     private StudentList studentList = new StudentList();
-    private List<Student> st = studentList.getStudentsList();
+    private List<Student> st = studentList.getStudentList();
     private RandomStudentGenerator randomGenerator = new RandomStudentGenerator();
 
     private Student correctStudent;

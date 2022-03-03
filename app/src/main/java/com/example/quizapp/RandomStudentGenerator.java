@@ -5,7 +5,7 @@ import java.util.List;
 public class RandomStudentGenerator {
 
     private StudentList studentList = new StudentList();
-    private List<Student> st = studentList.getStudentsList();
+    private List<Student> st = studentList.getStudentList();
 
     public RandomStudentGenerator() {
 

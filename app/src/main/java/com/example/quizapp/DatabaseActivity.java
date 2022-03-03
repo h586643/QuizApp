@@ -37,10 +37,10 @@ public class DatabaseActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         st = (StudentList) this.getApplication();
-        studentList = st.getStudentsList();
+        studentList = st.getStudentList();
 
 
-        listAdapter = new ListAdapter(DatabaseActivity.this, st.getStudentsList());
+        listAdapter = new ListAdapter(DatabaseActivity.this, st.getStudentList());
         binding.listView.setAdapter(listAdapter);
 
     }
@@ -65,7 +65,7 @@ public class DatabaseActivity extends AppCompatActivity {
             case R.id.menu_alpha:
                 // sorterer fra a to å.
                 Toast.makeText(DatabaseActivity.this, "Sort a til å", Toast.LENGTH_SHORT).show();
-                Collections.sort(st.getStudentsList(),Student.StudentNameComparator);
+                Collections.sort(st.getStudentList(),Student.StudentNameComparator);
                 // tell`s the Adapter about the dataset change.
                 ((BaseAdapter) listAdapter).notifyDataSetChanged();
 
@@ -74,7 +74,7 @@ public class DatabaseActivity extends AppCompatActivity {
 
             case R.id.menu_dec:
                 // sorterer fra å to a
-                Collections.sort(st.getStudentsList(),Student.StudentNameComparatorRev);
+                Collections.sort(st.getStudentList(),Student.StudentNameComparatorRev);
                 Toast.makeText(DatabaseActivity.this, "Sort å til a", Toast.LENGTH_SHORT).show();
                 ((BaseAdapter) listAdapter).notifyDataSetChanged();
                 return true;
